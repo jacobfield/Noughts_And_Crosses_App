@@ -39,11 +39,3 @@
   max-width: 24rem;
   background-color: #181820;
 }
-
-/* Media Query for smaller screens if needed */
-@media (max-width: 515px) {
-  /* Add any specific styles for smaller screens if needed */
-}
-.App {
-  font-size: 2vw;
-}
