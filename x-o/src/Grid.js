@@ -33,17 +33,19 @@ export function Grid() {
   // on grid-item button, have onClick={inputXOrO}
 
   return (
-    <div className="gameGrid">
-      {grid.map((gridData) => {
-        return (
-          <GridItem
-            key={gridData.id}
-            id={gridData.id}
-            value={gridData.value}
-            playerInput={() => inputXOrO(gridData)}
-          ></GridItem>
-        );
-      })}
+    <div className="mediaGrid">
+      <div className="gameGrid">
+        {grid.map((gridData) => {
+          return (
+            <GridItem
+              key={gridData.id}
+              id={gridData.id}
+              value={gridData.value}
+              playerInput={() => inputXOrO(gridData)}
+            ></GridItem>
+          );
+        })}
+      </div>
     </div>
   );
 }

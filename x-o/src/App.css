@@ -6,46 +6,44 @@
   border: 1px solid black;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px;
+  margin: 0 auto; /* Center the element on the page */
+  padding: 10px; /* Add some padding */
 }
 
 .gameGrid {
-  /* border: 1px solid black; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Fixed three columns on all screen sizes */
   grid-template-rows: repeat(3, 1fr);
   max-width: 24rem;
   margin-bottom: 30px;
   background-color: #181820;
 }
+
 .grid-item {
   border: 1px solid black;
   height: 8rem;
-  width: 8rem;
   font-size: 3rem;
-}
-
-/* .Header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+}
 
-.headerClass {
-  /* border: 1px solid orange; */
+.headerClass,
+.footer {
   background-color: white;
   margin-bottom: 20px;
-  width: 24rem;
+  width: 100%; /* Use full width */
+  max-width: 24rem;
   background-color: #181820;
 }
-.footer {
-  /* border: 1px solid orange; */
-  background-color: white;
-  /* margin-bottom: 20px; */
-  width: 24rem;
-  background-color: #181820;
+
+/* Media Query for smaller screens if needed */
+@media (max-width: 515px) {
+  /* Add any specific styles for smaller screens if needed */
+}
+.App {
+  font-size: 2vw;
 }
