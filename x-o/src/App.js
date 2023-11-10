@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
-import Header from "./Header.js";
+import { Header } from "./Header.js";
+import { Footer } from "./Footer.js";
 import { Grid } from "./Grid.js";
 
 export const initialOXGrid = [
@@ -18,10 +19,10 @@ export const initialOXGrid = [
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       {/* <Form /> */}
       <Grid />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

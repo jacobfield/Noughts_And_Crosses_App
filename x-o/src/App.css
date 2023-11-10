@@ -8,6 +8,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   max-width: 24rem;
+  margin-bottom: 30px;
 }
 .grid-item {
   border: 1px solid black;
@@ -25,3 +26,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 } */
+
+.headerClass {
+  border: 1px solid orange;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 24rem;
+}
+.footer {
+  border: 1px solid orange;
+  background-color: white;
+  margin-bottom: 20px;
+  width: 24rem;
+}
