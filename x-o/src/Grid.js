@@ -15,11 +15,19 @@ export function Grid() {
   // let playerMove = "X"
   // When called, sets state of value to playerMove
   // if playerMove === "X" ? playerMove = "O" : playerMove = "X"
-  function inputXOrO(gridData, playerMove) {
-    // set state of playerMove - gridData.value = playerMove
-    gridData.value = playerMove;
-    // change value o playerMove from X to O or O to X
-    playerMove === "X" ? setPlayerMove("O") : setPlayerMove("X");
+  function inputXOrO(gridData) {
+    // Clone the grid array to avoid directly mutating state
+    const updatedGrid = [...grid];
+    // Find the clicked grid item by its ID
+    const clickedGridItem = updatedGrid.find((item) => item.id === gridData.id);
+    // Check if the grid item is empty before updating its value
+    if (clickedGridItem.value === "") {
+      clickedGridItem.value = playerMove;
+      // Toggle playerMove from X to O or O to X
+      setPlayerMove((prevPlayerMove) => (prevPlayerMove === "X" ? "O" : "X"));
+      // Update the state with the modified grid
+      setGrid(updatedGrid);
+    }
   }
 
   // on grid-item button, have onClick={inputXOrO}
@@ -32,6 +40,7 @@ export function Grid() {
             key={gridData.id}
             id={gridData.id}
             value={gridData.value}
+            playerInput={() => inputXOrO(gridData)}
           ></GridItem>
         );
       })}
@@ -39,7 +48,11 @@ export function Grid() {
   );
 }
 
-function GridItem({ id, value }) {
+function GridItem({ id, value, playerInput }) {
   console.log(id);
-  return <button className="grid-item">{value}</button>;
+  return (
+    <button className="grid-item" onClick={playerInput}>
+      {value}
+    </button>
+  );
 }
