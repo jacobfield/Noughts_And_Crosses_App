@@ -5,6 +5,7 @@
   background-color: #181820;
   border: 1px solid black;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
 }
 
 .gameGrid {
