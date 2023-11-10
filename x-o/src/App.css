@@ -8,6 +8,7 @@
   border-radius: 10px;
   margin: 0 auto; /* Center the element on the page */
   padding: 10px; /* Add some padding */
+  height: 100%;
 }
 
 .gameGrid {
