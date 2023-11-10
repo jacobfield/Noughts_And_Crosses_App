@@ -4,7 +4,7 @@ import Header from "./Header.js";
 import { Grid } from "./Grid.js";
 
 export const initialOXGrid = [
-  { id: 1, locationName: "top-left", value: "" },
+  { id: 1, locationName: "top-left", value: "one" },
   { id: 2, locationName: "top-centre", value: "" },
   { id: 3, locationName: "top-right", value: "" },
   { id: 4, locationName: "middle-left", value: "" },
