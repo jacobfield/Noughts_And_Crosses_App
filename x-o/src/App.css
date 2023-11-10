@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  color: white;
+  max-width: 24rem;
+  background-color: #181820;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .gameGrid {
@@ -9,11 +14,13 @@
   grid-template-rows: repeat(3, 1fr);
   max-width: 24rem;
   margin-bottom: 30px;
+  background-color: #181820;
 }
 .grid-item {
   border: 1px solid black;
   height: 8rem;
   width: 8rem;
+  font-size: 3rem;
 }
 
 /* .Header {
@@ -28,14 +35,16 @@
 } */
 
 .headerClass {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   background-color: white;
   margin-bottom: 20px;
   width: 24rem;
+  background-color: #181820;
 }
 .footer {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   background-color: white;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   width: 24rem;
+  background-color: #181820;
 }
