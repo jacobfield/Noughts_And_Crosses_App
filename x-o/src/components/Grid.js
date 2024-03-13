@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { initialOXGrid } from "../App.js";
 import winLogic from "../winLogic.js";
 import WinSequence from "./WinSequence.js";
-import PopUp from "./PopUp.js";
+import PopUpComponent from "./PopUp.js";
 
 export function Grid() {
   const [grid, setGrid] = useState(initialOXGrid);
@@ -53,7 +53,11 @@ export function Grid() {
         <p>Player O Wins: {oScore}</p>
         <button onClick={resetValues}> New Game?</button>
       </div>
-      <PopUp resetValues={resetValues} xScore={xScore} oScore={oScore} />
+      <PopUpComponent
+        resetValues={resetValues}
+        xScore={xScore}
+        oScore={oScore}
+      ></PopUpComponent>
     </div>
   );
 }
