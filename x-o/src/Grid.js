@@ -18,6 +18,7 @@ export function Grid() {
       // Toggle playerMove from X to O or O to X
       setPlayerMove((prevPlayerMove) => (prevPlayerMove === "X" ? "O" : "X"));
       // Update the state with the modified grid
+      // console.log(updatedGrid[5].value);
       setGrid(updatedGrid);
     }
   }
