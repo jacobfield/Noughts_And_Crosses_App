@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { initialOXGrid } from "../App.js";
 import winLogic from "../winLogic.js";
+import WinSequence from "./WinSequence.js";
 
 export function Grid() {
   const [grid, setGrid] = useState(initialOXGrid);
   const [playerMove, setPlayerMove] = useState("X");
-  const [win, setWin] = useState(0);
+  const [xScore, setXScore] = useState(0);
+  const [oScore, setOScore] = useState(0);
   function inputXOrO(gridData) {
     // Clone the grid array to avoid directly mutating state
     const updatedGrid = [...grid];
@@ -22,6 +24,7 @@ export function Grid() {
       winLogic(grid);
     }
   }
+
   return (
     <div className="mediaGrid">
       <div className="gameGrid">
@@ -35,6 +38,12 @@ export function Grid() {
             ></GridItem>
           );
         })}
+        <WinSequence
+          xScore={xScore}
+          setXScore={setXScore}
+          oScore={oScore}
+          setOScore={setOScore}
+        ></WinSequence>
       </div>
     </div>
   );

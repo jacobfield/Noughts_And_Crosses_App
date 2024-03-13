@@ -1,10 +1,17 @@
 export default function winLogic(grid) {
+  let xWins = 0;
+  let oWins = 0;
   if (
     grid[0].value !== "" &&
     grid[0].value === grid[1].value &&
     grid[0].value === grid[2].value
   ) {
     console.log(`${grid[0].value} wins!`);
+    if (grid[0].value === "X") {
+      xWins++;
+    } else if (grid[0].value === "O") {
+      oWins++;
+    }
   } else if (
     grid[3].value !== "" &&
     grid[3].value === grid[4].value &&
@@ -48,4 +55,6 @@ export default function winLogic(grid) {
   ) {
     console.log(`${grid[6].value} wins!`);
   }
+  console.log(`Player X Wins: ${xWins}`);
+  console.log(`Player O Wins: ${oWins}`);
 }
