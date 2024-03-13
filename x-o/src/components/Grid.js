@@ -50,7 +50,7 @@ export function Grid() {
         ))}
         <p>Player X Wins: {xScore}</p>
         <p>Player O Wins: {oScore}</p>
-        <button onClick={resetValues}> test</button>
+        <button onClick={resetValues}> New Game?</button>
       </div>
     </div>
   );

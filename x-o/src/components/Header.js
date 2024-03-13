@@ -6,7 +6,7 @@ export function Header() {
     <header className="headerClass">
       <h1>Team 19 Noughts & Crosses</h1>
       <button className="restartButton" onClick={refreshPage}>
-        Restart?
+        Reset Scores
       </button>
     </header>
   );
