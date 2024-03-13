@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-import { Header } from "./Header.js";
-import { Footer } from "./Footer.js";
-import { Grid } from "./Grid.js";
+import { Header } from "./components/Header.js";
+import { Footer } from "./components/Footer.js";
+import { Grid } from "./components/Grid.js";
 
 export const initialOXGrid = [
   { id: 1, locationName: "top-left", value: "" },
