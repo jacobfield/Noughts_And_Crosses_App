@@ -1,4 +1,5 @@
-import { useState } from "react";
+// Grid.js
+import { useState, useEffect } from "react";
 import { initialOXGrid } from "../App.js";
 import winLogic from "../winLogic.js";
 import WinSequence from "./WinSequence.js";
@@ -8,46 +9,39 @@ export function Grid() {
   const [playerMove, setPlayerMove] = useState("X");
   const [xScore, setXScore] = useState(0);
   const [oScore, setOScore] = useState(0);
+
+  useEffect(() => {
+    winLogic(grid, setXScore, setOScore);
+  }, [grid]);
+
   function inputXOrO(gridData) {
-    // Clone the grid array to avoid directly mutating state
     const updatedGrid = [...grid];
-    // Find the clicked grid item by its ID
     const clickedGridItem = updatedGrid.find((item) => item.id === gridData.id);
-    // Check if the grid item is empty before updating its value
     if (clickedGridItem.value === "") {
       clickedGridItem.value = playerMove;
-      // Toggle playerMove from X to O or O to X
       setPlayerMove((prevPlayerMove) => (prevPlayerMove === "X" ? "O" : "X"));
-      // Update the state with the modified grid
-      // console.log(updatedGrid[5].value);
       setGrid(updatedGrid);
-      winLogic(grid);
     }
   }
 
   return (
     <div className="mediaGrid">
       <div className="gameGrid">
-        {grid.map((gridData) => {
-          return (
-            <GridItem
-              key={gridData.id}
-              id={gridData.id}
-              value={gridData.value}
-              playerInput={() => inputXOrO(gridData)}
-            ></GridItem>
-          );
-        })}
-        <WinSequence
-          xScore={xScore}
-          setXScore={setXScore}
-          oScore={oScore}
-          setOScore={setOScore}
-        ></WinSequence>
+        {grid.map((gridData) => (
+          <GridItem
+            key={gridData.id}
+            id={gridData.id}
+            value={gridData.value}
+            playerInput={() => inputXOrO(gridData)}
+          />
+        ))}
+        <p>Player X Wins: {xScore}</p>
+        <p>Player O Wins: {oScore}</p>
       </div>
     </div>
   );
 }
+
 function GridItem({ id, value, playerInput }) {
   return (
     <button className="grid-item" onClick={playerInput}>
@@ -55,8 +49,3 @@ function GridItem({ id, value, playerInput }) {
     </button>
   );
 }
-
-// init win state, pass down to winlogic as props
-// upon win, update win state in winLogic
-// useEffect hook listening for change in win state
-// when useEffect runs, render WinSequence comp

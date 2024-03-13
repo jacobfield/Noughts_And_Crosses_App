@@ -1,16 +1,14 @@
-export default function winLogic(grid) {
-  let xWins = 0;
-  let oWins = 0;
+export default function winLogic(grid, setXScore, setOScore) {
   if (
     grid[0].value !== "" &&
     grid[0].value === grid[1].value &&
     grid[0].value === grid[2].value
   ) {
-    console.log(`${grid[0].value} wins!`);
     if (grid[0].value === "X") {
-      xWins++;
+      setXScore((prevXScore) => prevXScore + 1);
+      console.log("X wins");
     } else if (grid[0].value === "O") {
-      oWins++;
+      setOScore((prevOScore) => prevOScore + 1);
     }
   } else if (
     grid[3].value !== "" &&
@@ -55,6 +53,6 @@ export default function winLogic(grid) {
   ) {
     console.log(`${grid[6].value} wins!`);
   }
-  console.log(`Player X Wins: ${xWins}`);
-  console.log(`Player O Wins: ${oWins}`);
+  //   console.log(`Player X Wins: ${xWins}`);
+  //   console.log(`Player O Wins: ${oWins}`);
 }
