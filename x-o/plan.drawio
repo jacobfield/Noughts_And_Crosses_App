@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="zYO3tJ6yhb9iPCyTcZ03" name="Page-1">
+        <mxGraphModel dx="623" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="120" y="240" as="sourcePoint"/>
+                        <mxPoint x="120" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="160" y="240" as="sourcePoint"/>
+                        <mxPoint x="160" y="120" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="80" y="160" as="sourcePoint"/>
+                        <mxPoint x="200" y="160" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="80" y="200" as="sourcePoint"/>
+                        <mxPoint x="200" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="8 Possible win conditions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="290" y="110" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Init 'counter' state, counter++ on each player input&lt;br&gt;If counter &amp;gt;= 5, run win checker function&lt;br&gt;&lt;br&gt;&lt;br&gt;If !blank &amp;amp; : gridData.id ===1&amp;nbsp; === 2 &amp;amp;&amp;amp; === 3&amp;nbsp;&lt;br&gt;Or: 4 === 5 &amp;amp;&amp;amp; === 6&lt;br&gt;Or: 7 === 8 &amp;amp;&amp;amp; ===9&lt;br&gt;Or: 1=== 4 &amp;amp;&amp;amp; ===7&lt;br&gt;Or: 2 ===5 &amp;amp;&amp;amp; ===8&lt;br&gt;Or: 3 ===6 &amp;amp;&amp;amp; === 9&lt;br&gt;Or 1 ===5 &amp;amp;&amp;amp; === 9&lt;br&gt;Or 3 ===5 &amp;amp;&amp;amp; ===7" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="270" width="350" height="250" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
