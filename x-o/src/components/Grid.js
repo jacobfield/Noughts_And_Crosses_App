@@ -23,6 +23,19 @@ export function Grid() {
       setGrid(updatedGrid);
     }
   }
+  function resetValues() {
+    setGrid([
+      { id: 1, locationName: "top-left", value: "" },
+      { id: 2, locationName: "top-centre", value: "" },
+      { id: 3, locationName: "top-right", value: "" },
+      { id: 4, locationName: "middle-left", value: "" },
+      { id: 5, locationName: "middle-centre", value: "" },
+      { id: 6, locationName: "middle-right", value: "" },
+      { id: 7, locationName: "bottom-left", value: "" },
+      { id: 8, locationName: "bottom-centre", value: "" },
+      { id: 9, locationName: "bottom-right", value: "" },
+    ]);
+  }
 
   return (
     <div className="mediaGrid">
@@ -37,6 +50,7 @@ export function Grid() {
         ))}
         <p>Player X Wins: {xScore}</p>
         <p>Player O Wins: {oScore}</p>
+        <button onClick={resetValues}> test</button>
       </div>
     </div>
   );
