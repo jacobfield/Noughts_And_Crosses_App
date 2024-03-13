@@ -1,20 +1,12 @@
 import { useState } from "react";
 import { initialOXGrid } from "./App.js";
+// each grid cell is an invisible button and displays <p>{initialOXGrid.value</p>
+// Upon button click, set value to either X / O, dictated by a function
 
 export function Grid() {
-  // initialOXGrid.value = blank
-  // each grid cell is an invisible button and displays <p>{initialOXGrid.value</p>
-  // Upon button click, set value to either X / O, dictated by a function
   const [grid, setGrid] = useState(initialOXGrid);
   const [playerMove, setPlayerMove] = useState("X");
 
-  //   console.log(initialOXGrid);
-  // grid.value = what will be updated with setGrid
-
-  // function to set inputXOrO
-  // let playerMove = "X"
-  // When called, sets state of value to playerMove
-  // if playerMove === "X" ? playerMove = "O" : playerMove = "X"
   function inputXOrO(gridData) {
     // Clone the grid array to avoid directly mutating state
     const updatedGrid = [...grid];
@@ -29,9 +21,6 @@ export function Grid() {
       setGrid(updatedGrid);
     }
   }
-
-  // on grid-item button, have onClick={inputXOrO}
-
   return (
     <div className="mediaGrid">
       <div className="gameGrid">
@@ -49,9 +38,7 @@ export function Grid() {
     </div>
   );
 }
-
 function GridItem({ id, value, playerInput }) {
-  console.log(id);
   return (
     <button className="grid-item" onClick={playerInput}>
       {value}
